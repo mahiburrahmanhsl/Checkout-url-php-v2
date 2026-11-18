@@ -1,0 +1,24 @@
+<?php
+// Rename to config.local.php and fill in merchant credentials.
+// Do not commit or publicly expose this file.
+return [
+    'environment' => 'sandbox',
+    'base_url' => 'https://tokenized.sandbox.bka.sh/v2/tokenized-checkout',
+    'username' => 'YOUR_BKASH_USERNAME',
+    'password' => 'YOUR_BKASH_PASSWORD',
+    'app_key' => 'YOUR_APP_KEY',
+    'app_secret' => 'YOUR_APP_SECRET',
+    'callback_url' => 'https://YOUR_NGROK_OR_DOMAIN/InfinityHub/callback.php',
+    'db' => [
+        'host' => '127.0.0.1',
+        'name' => 'infinityhub',
+        'user' => 'root',
+        'password' => '',
+        'charset' => 'utf8mb4',
+    ],
+    'currency' => 'BDT',
+    'token_safety_seconds' => 120,
+    'api_timeout_seconds' => 30,
+    // Generate a random secret of at least 32 characters for refund.php access.
+    'refund_admin_key' => 'REPLACE_WITH_A_LONG_RANDOM_SECRET_32_CHARS_MIN',
+];
